@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url("https://images.pexels.com/photos/1294668/pexels-photo-1294668.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact">
+
+        <h1 style="color: rgb(127, 255, 180);"> CONTACT US </h1>
+
+        <h2>
+
+            <span style="color:rgb(217, 255, 0)"> HAPPY TO HAVE YOU !!! </span>
+
+        </h2>
+        <center>
+        <form id="loginForm">
+
+            <div class="form">
+            <span style="color: #00ff22;" >
+            <h3>
+            <label for="name">User Name</label>
+            <input type="text" naem="name" id="name">
+            </h3>
+            </span>
+
+            <br />
+
+            <span style="color: #00ff22;">
+            <h3>
+            <label for="password">Password</label>
+            <input type="password" placeholder="password">
+            </h3>
+            </span>
+
+            <br />
+            <span style="color: #00ff22;">
+            <h3><label for="email">Email</label>
+            <input type="email" name="" id="" value="email@gmail">
+            </h3>
+            </span>
+
+            <br />
+
+            <span style="color: #00ff22;">
+            <h3>
+            <label for="">Description</label>
+            <textarea name="" id="" cols="20" rows="10"></textarea>
+            </h3>
+            </span>
+
+            <br />
+
+            <input type="submit" value="submit please" id="submit">
+            
+            </div>
+
+        </form>
+    </center>
+
+        <h1><a href="index.html" style="color: blanchedalmond;">Back to main page</a></h1>
+        
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            var username = document.getElementById("name").value;
+
+            // Redirect to the index page with the username as a URL parameter
+
+            window.location.href = "index.html?username=" + encodeURIComponent(username);
+        });
+    </script>
+
+</body>
+
+</html>

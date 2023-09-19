@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Parking Management</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+        <h1>Street Parking Management</h1>
+        <button class="menu-button" onclick="toggleSidePanel()">Menu</button>
+    </header>
+
+    <style>
+        body {
+            background-image: url("grass.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+
+    <div class="side-panel" id="sidePanel">
+        <div class="side-panel-content">
+            <div class="side-panel-background"></div>
+            <div class="side-panel-header">
+                <center><h3 style="color: #ff99f7;">Street Parking Management</h3></center>
+                <button class="close-button" onclick="toggleSidePanel()"><< Close</button>
+            </div>
+
+            <div class="profile-info">
+                <img src="profilepic.jpeg" alt="User jpg">
+                <p style="color: rgb(0, 255, 213);">UserName:
+                <br>
+            <span style="color: rgb(0, 255, 0);" id="welcomeUsername"></span></p>
+            </div>
+
+            <hr>
+
+            <div class="profile-options">
+                <hr>
+                <center>
+                <button>
+                <a href="contact.html">Login/Signin</a>
+                </button>
+                </center>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <div class="road">
+        <!-- adding parking spots on the left side of the road-->
+        <div class="parking-spot-container">
+            <div class="parking-spot available" onclick="toggleSpot(this)"></div>
+            <div class="parking-spot occupied" onclick="toggleSpot(this)"></div>
+            <div class="parking-spot available" onclick="toggleSpot(this)"></div>
+            <div class="parking-spot occupied" onclick="toggleSpot(this)"></div>
+            <div class="parking-spot available" onclick="toggleSpot(this)"></div>
+            <div class="parking-spot occupied" onclick="toggleSpot(this)"></div>
+            <div class="parking-spot available" onclick="toggleSpot(this)"></div>
+        </div>
+    </div>
+
+    <!-- Popup for payment -->
+    <div class="popup" id="paymentPopup">
+        <div class="popup-content">
+            <h3>Payment Method</h3>
+            <p>Basic Pay: $20</p>
+            <button onclick="markOccupied()">Pay</button>
+            <button onclick="closePopups()">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Popup for entering code -->
+    <div class="popup" id="codePopup">
+        <div class="popup-content">
+            <h3>Enter the code:</h3>
+            <input type="password" id="codeInput">
+            <button onclick="markAvailable()">Submit</button>
+            <button onclick="closePopups()">Close</button>
+        </div>
+    </div>
+
+    <script>
+
+        let selectedParkingSpot = null;
+        function toggleSpot(parkingSpot) {
+            closePopups();
+
+            if (selectedParkingSpot === parkingSpot) {
+                selectedParkingSpot = null;
+            } else {
+                selectedParkingSpot = parkingSpot;
+                openAppropriatePopup(parkingSpot);
+            }
+        }
+
+        function openAppropriatePopup(parkingSpot) {
+            if (parkingSpot.classList.contains("available")) {
+                document.getElementById("paymentPopup").style.display = "block";
+            } else if (parkingSpot.classList.contains("occupied")) {
+                document.getElementById("codePopup").style.display = "block";
+            }
+        }
+
+        function markOccupied() {
+            if (selectedParkingSpot) {
+                do {
+                    var codeInput = prompt("Enter the code:");
+                } while (codeInput !== "1234");
+                selectedParkingSpot.classList.remove("available");
+                selectedParkingSpot.classList.add("occupied");
+                closePopups();
+            }
+        }
+
+        function markAvailable() {
+            if (selectedParkingSpot) {
+                const codeInput = document.getElementById("codeInput").value;
+                if (codeInput === "1234") {
+                    selectedParkingSpot.classList.remove("occupied");
+                    selectedParkingSpot.classList.add("available");
+                    closePopups();
+                } else {
+                    alert("Invalid code. Please try again.");
+                }
+            }
+        }
+
+        function closePopups() {
+            document.getElementById("paymentPopup").style.display = "none";
+            document.getElementById("codePopup").style.display = "none";
+        }
+
+        function toggleSidePanel() {
+            const sidePanel = document.getElementById("sidePanel");
+            sidePanel.classList.toggle("open");
+        }
+    </script>
+
+    <script>
+        // Function to get URL parameters by name
+        function getUrlParameter(name) {
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(window.location.href);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Retrieve the username from the URL parameter
+        var username = getUrlParameter('username');
+
+        if (username) {
+            // Display the username on the welcome page
+            document.getElementById("welcomeUsername").textContent = username;
+        }
+    </script>
+
+    <!-- add footer-->
+    <footer>
+        <!-- add copyright 2023-->
+        <p>&copy; 2023 by Street Parking Management</p>
+    </footer>
+
+</body>
+</html>

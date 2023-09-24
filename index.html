@@ -15,7 +15,7 @@
 
     <style>
         body {
-            background-image: url("grass.jpg");
+            background-color: #c9b6b69f;
             background-size: cover;
             background-attachment: fixed;
         }
@@ -30,7 +30,7 @@
             </div>
 
             <div class="profile-info">
-                <img src="profilepic.jpeg" alt="User jpg">
+                <img src="profilepic.png" alt="User png">
                 <p style="color: rgb(0, 255, 213);">UserName:
                 <br>
             <span style="color: rgb(0, 255, 0);" id="welcomeUsername"></span></p>
@@ -68,6 +68,9 @@
         <div class="popup-content">
             <h3>Payment Method</h3>
             <p>Basic Pay: $20</p>
+            <p>Pay with:</p>
+            <!-- onclicking the pay button below revert into payment.html page -->
+            <a href="payment.html"><button>Pay with Card</button></a>
             <button onclick="markOccupied()">Pay</button>
             <button onclick="closePopups()">Cancel</button>
         </div>
@@ -159,12 +162,20 @@
             document.getElementById("welcomeUsername").textContent = username;
         }
     </script>
+    <div class="container">
+        <div class="payment-form">
+            <!-- ... (your payment form) ... -->
+        </div>
+    </div>
 
-    <!-- add footer-->
-    <footer>
-        <!-- add copyright 2023-->
-        <p>&copy; 2023 by Street Parking Management</p>
-    </footer>
+    <script>
+        // Retrieve the stored amount from localStorage
+        const storedAmount = localStorage.getItem("paymentAmount");
+
+        if (storedAmount) {
+            document.write(`<p>Your last payment amount: $${storedAmount}</p>`);
+        }
+    </script>
 
 </body>
 </html>

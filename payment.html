@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Page</h1>
+        <div class="payment-form">
+            <label for="amount">Enter Amount:</label>
+            <input type="number" id="amount" placeholder="Enter the amount">
+            <button id="payButton">Pay</button>
+            <div id="paymentStatus"></div>
+            
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const payButton = document.getElementById("payButton");
+    const amountInput = document.getElementById("amount");
+    const paymentStatus = document.getElementById("paymentStatus");
+
+    payButton.addEventListener("click", function() {
+        const amount = parseFloat(amountInput.value);
+
+        if (isNaN(amount) || amount <= 0) {
+            paymentStatus.innerText = "Please enter a valid amount.";
+        } else {
+            // Show a popup to enter a code
+            const code = prompt("Please enter the code (e.g., 1234):");
+
+            if (code === "1234") {
+                paymentStatus.innerText = "Please wait, your payment is processing...";
+
+                // Simulate payment processing time (2 seconds in this example)
+                setTimeout(function() {
+                    // Store the amount in localStorage
+                    localStorage.setItem("paymentAmount", amount.toFixed(2));
+                    paymentStatus.innerText = `Your payment of $${amount.toFixed(2)} was successful.`;
+
+                    // Redirect to index.html after a successful payment
+                    setTimeout(function() {
+                        window.location.href = "index.html";
+                    }, 2000); // Redirect after 2 seconds (adjust as needed)
+                }, 2000); // Simulate payment processing time (adjust as needed)
+            } else {
+                paymentStatus.innerText = "Invalid code. Payment failed.";
+            }
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

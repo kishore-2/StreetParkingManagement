@@ -163,6 +163,10 @@ h1 {
     background-color: #e74c3c;
 }
 
+.parking-spot.occupied1 {
+    background-color: #e74c3c;
+}
+
 .popup {
     display: none;
     justify-content: center;
@@ -197,4 +201,29 @@ footer {
     display: flex;
     text-align: right;
 
+}
+
+/* Style for the button container */
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#showMapButton.map-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px 20px;
+}
+
+#showMapButton.map-button:hover {
+    background-color: #0056B3;
 }

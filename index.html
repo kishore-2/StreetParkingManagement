@@ -13,6 +13,28 @@
         <button class="menu-button" onclick="toggleSidePanel()">Menu</button>
     </header>
 
+    <div class="container">
+        <button id="showMapButton" class="map-button">Show Map</button>
+        <iframe id="mapFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.2264330841413!2d78.12117337452712!3d9.915090390186027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c59d167a4b05%3A0x662a4377ed8bdea4!2sThirumalai%20Nayakkar%20Palace%2C%20Panthadi%201st%20St%2C%20Mahal%20Area%2C%20Madurai%20Main%2C%20Madurai%2C%20Tamil%20Nadu%20625001!5e0!3m2!1sen!2sin!4v1695548815344!5m2!1sen!2sin" width="100%" height="400" frameborder="0" style="display: none;"></iframe>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const showMapButton = document.getElementById("showMapButton");
+    const mapFrame = document.getElementById("mapFrame");
+
+    showMapButton.addEventListener("click", function() {
+        if (mapFrame.style.display === "none") {
+            mapFrame.style.display = "block";
+            showMapButton.textContent = "Hide Map";
+        } else {
+            mapFrame.style.display = "none";
+            showMapButton.textContent = "Show Map";
+        }
+    });
+});
+    </script>
+
     <style>
         body {
             background-color: #c9b6b69f;
@@ -26,7 +48,6 @@
             <div class="side-panel-background"></div>
             <div class="side-panel-header">
                 <center><h3 style="color: #000000;">Street Parking Management</h3></center>
-                <button class="close-button" onclick="toggleSidePanel()"><< Close</button>
             </div>
 
             <div class="profile-info">
@@ -39,13 +60,9 @@
             <hr>
 
             <div class="profile-options">
-                <hr>
                 <center>
-                <button>
                 <a href="contact.html">Login/Signin</a>
-                </button>
                 </center>
-                <hr>
             </div>
         </div>
     </div>
@@ -70,7 +87,7 @@
             <p>Basic Pay: $20</p>
             <p>Pay with:</p>
             <!-- onclicking the pay button below revert into payment.html page -->
-            <a href="payment.html"><button>Pay using Online</button></a>
+            <a href="payment.html"><button onclick="markOccupied1()">Pay using Online</button></a>
             <button onclick="markOccupied()">Pay with Cash</button>
             <button onclick="closePopups()">Cancel</button>
         </div>
@@ -129,6 +146,14 @@
                 } else {
                     alert("Invalid code. Please try again.");
                 }
+            }
+        }
+
+        function markOccupied1() {
+            if (selectedParkingSpot) {
+                selectedParkingSpot.classList.remove("available");
+                selectedParkingSpot.classList.add("occupied");
+                closePopups();
             }
         }
 

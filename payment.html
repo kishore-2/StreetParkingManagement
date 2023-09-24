@@ -30,27 +30,21 @@
         if (isNaN(amount) || amount <= 0) {
             paymentStatus.innerText = "Please enter a valid amount.";
         } else {
-            // Show a popup to enter a code
-            const code = prompt("Please enter the code: ");
+            // Display a popup message indicating the code is "1234"
+            
+            paymentStatus.innerText = "Please wait, your payment is processing...";
+            alert("Your code is 1234");
+            // Simulate payment processing time (2 seconds in this example)
+            setTimeout(function() {
+                // Store the amount in localStorage
+                localStorage.setItem("paymentAmount", amount.toFixed(2));
+                paymentStatus.innerText = `Your payment of $${amount.toFixed(2)} was successful.`;
 
-            if (code === "1234") {
-                paymentStatus.innerText = "Please wait, your payment is processing...";
-
-                // Simulate payment processing time (2 seconds in this example)
+                // Redirect to index.html after a successful payment
                 setTimeout(function() {
-                    // Store the amount in localStorage
-                    localStorage.setItem("paymentAmount", amount.toFixed(2));
-                    paymentStatus.innerText = `\nYour payment of $${amount.toFixed(2)} was successful.`;
-                    paymentStatus.innerText += "\nRedirecting to home page...";
-
-                    // Redirect to index.html after a successful payment
-                    setTimeout(function() {
-                        window.location.href = "index.html";
-                    }, 2000); // Redirect after 2 seconds (adjust as needed)
-                }, 2000); // Simulate payment processing time (adjust as needed)
-            } else {
-                paymentStatus.innerText = "Invalid code. Payment failed.";
-            }
+                    window.location.href = "index.html";
+                }, 2000); // Redirect after 2 seconds (adjust as needed)
+            }, 2000); // Simulate payment processing time (adjust as needed)
         }
     });
 });

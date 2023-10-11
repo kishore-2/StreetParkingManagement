@@ -200,5 +200,34 @@
         }
     </script>
 
+<a href="chatbot.html">
+    <!-- Replace 'bot-image.png' with the path to your bot icon image -->
+    <img class="bot-icon" id="bot-icon" src="botimg.png" alt="Bot">
+</a>
+
+<style>
+        /* Add CSS styles for your bot icon image */
+        .bot-icon {
+            position: fixed;
+            bottom: 10px; /* Adjust the bottom distance as needed */
+            right: 10px; /* Adjust the right distance as needed */
+            width: 80px; /* Adjust the width as needed for the bot icon */
+            height: 80px; /* Adjust the height as needed for the bot icon */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    </style>
+
+<script>
+    // JavaScript to redirect to chatbot.html when the icon is clicked
+    const botIcon = document.getElementById("bot-icon");
+
+    botIcon.addEventListener("click", () => {
+        window.location.href = "chatbot.html";
+    });
+</script>
+
 </body>
 </html>

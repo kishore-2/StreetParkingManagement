@@ -13,8 +13,8 @@
             <label for="amount">Enter Amount:</label>
             <input type="number" id="amount" placeholder="Enter the amount">
             <button id="payButton">Pay</button>
+            <p></p>
             <div id="paymentStatus"></div>
-            
         </div>
     </div>
 
@@ -42,7 +42,7 @@
 
                 // Redirect to index.html after a successful payment
                 setTimeout(function() {
-                    window.location.href = "index.html";
+                    paymentStatus.innerText = "Payment successful! You can now close this tab.";
                 }, 2000); // Redirect after 2 seconds (adjust as needed)
             }, 2000); // Simulate payment processing time (adjust as needed)
         }

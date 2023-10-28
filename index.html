@@ -86,7 +86,7 @@
             <h3>Payment Method</h3>
             <p>Basic Pay: ₹40</p>
             <!-- onclicking the pay button below revert into payment.html page -->
-            <a href="payment.html"><button onclick="markOccupied1()">Pay Here</button></a>
+            <button id="paymentButton" onclick="markOccupied1()">Pay Here</button></a>
             <button onclick="closePopups()">Cancel</button>
         </div>
     </div>
@@ -102,6 +102,14 @@
     </div>
 
     <script>
+
+    document.getElementById("paymentButton").addEventListener("click", function() {
+        // Specify the URL of the payment page (payment.html)
+        var urlToOpen = "payment.html";
+
+        // Open the URL in a new tab
+        window.open(urlToOpen, "_blank");
+    });
 
         let selectedParkingSpot = null;
         function toggleSpot(parkingSpot) {

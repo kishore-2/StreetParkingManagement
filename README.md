@@ -3,14 +3,22 @@
 
 A Microsoft Future Ready Talent Project with the title of Street Parking Management in the catogory of Earth.
 
-This is a web application for managing street parking spots in a city. The application allows users to view available parking spots on a map, reserve a parking spot, and pay for parking using a credit card. The application is hosted on an Azure Static Web Page and integrated with an Azure Chatbot for user service.
+This is a web application for managing street parking spots in a city. The application allows users to view available parking spots on a map, reserve a parking spot, and pay for parking using a credit card. The application is hosted on an Azure Static Web Page and integrated with an Azure Chatbot for user service. 
 
-[![Example Image](https://raw.githubusercontent.com/kishore-2/StreetParkingManagement/master/sub-disabled.png)](https://raw.githubusercontent.com/kishore-2/StreetParkingManagement/master/sub-disabled.png)
+Due to the students credits consumed completely the subscription has been disabled. The services by Azure have been stopped such us Azure Chatbot service and Azure Static Web Apps. I added the Screenshots in the Readme as you mention in the meeting for your reference.
+
+![sub-disabled](https://github.com/kishore-2/StreetParkingManagement/assets/67355905/1b549790-654f-443e-927f-0ddebffa0dee)
+
+The Azure resource group for this project:
+
+You can check the chatbot service and static web apps services have been integrated into my project.
+
+![resource-grp](https://github.com/kishore-2/StreetParkingManagement/assets/67355905/ebd61ada-914a-416d-8bfe-54595e14f19a)
 
 
 ## Getting Started
 
-To get started with this project, you can visit the Azure Static Web Page URL to access the application.
+To get started with this project, you can visit the Azure Static Web Page URL to access the application. (Subscription disabled)
 
 https://brave-water-065e9b810.3.azurestaticapps.net
 

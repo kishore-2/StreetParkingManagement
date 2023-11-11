@@ -9,7 +9,7 @@ Due to the students credits consumed completely the subscription has been disabl
 
 ![sub-disabled](https://github.com/kishore-2/StreetParkingManagement/assets/67355905/1b549790-654f-443e-927f-0ddebffa0dee)
 
-The Azure resource group for this project:
+### The Azure resource group for this project:
 
 You can check the chatbot service and static web apps services have been integrated into my project.
 

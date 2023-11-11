@@ -5,6 +5,10 @@ A Microsoft Future Ready Talent Project with the title of Street Parking Managem
 
 This is a web application for managing street parking spots in a city. The application allows users to view available parking spots on a map, reserve a parking spot, and pay for parking using a credit card. The application is hosted on an Azure Static Web Page and integrated with an Azure Chatbot for user service. 
 
+### Demo Video URL:
+
+https://youtu.be/880urBOQreQ
+
 Due to the students credits consumed completely the subscription has been disabled. The services by Azure have been stopped such us Azure Chatbot service and Azure Static Web Apps. I added the Screenshots in the Readme as you mention in the meeting for your reference.
 
 ![sub-disabled](https://github.com/kishore-2/StreetParkingManagement/assets/67355905/1b549790-654f-443e-927f-0ddebffa0dee)

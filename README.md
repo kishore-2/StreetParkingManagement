@@ -11,26 +11,11 @@ This is a web application for managing street parking spots in a city. This appl
 
 https://youtu.be/880urBOQreQ
 
-**Due to the students credits consumed completely the subscription have been disabled. The services by Azure stopped its services such us Azure Bot service, Azure Cognetive Search and Azure Static Web Apps. I added the Screenshots in the Readme as you mention in the meeting for your reference.
-
-![sub-disabled](https://github.com/kishore-2/StreetParkingManagement/assets/67355905/1b549790-654f-443e-927f-0ddebffa0dee)
-
-### The Azure resource group for this project:
-![resource-grp](https://github.com/kishore-2/StreetParkingManagement/assets/67355905/ebd61ada-914a-416d-8bfe-54595e14f19a)
-
-### The Azure Bot Service and the test:
-![AzureBot](https://github.com/kishore-2/StreetParkingManagement/assets/67355905/7594e0d5-a635-413b-ad19-1027db0f7e37)
-![AzureBot2](https://github.com/kishore-2/StreetParkingManagement/assets/67355905/4ea26820-9b9b-43cf-82d2-bd5988c53427)
-
-### The Azure Cognitive Service:
-![AzureCognetiveSearch](https://github.com/kishore-2/StreetParkingManagement/assets/67355905/ac0234a3-7524-42a8-abb2-f14a2f3593f5)
-
-### The Azure Static Web Apps:
-![staticwebapps](https://github.com/kishore-2/StreetParkingManagement/assets/67355905/5b943df7-eb5a-466c-896e-930ef184e5fb)
+#### Note: The Azure services like chatbot and static web apps won't work due to subscription disabled.
 
 ## Getting Started
 
-To get started with this project, you can visit the Azure Static Web Page URL to access the application. (Subscription disabled)
+To get started with this project, you can visit the Azure Static Web Page URL to access the application. (currently unavailable due to Subscription disabled)
 
 https://brave-water-065e9b810.3.azurestaticapps.net
 

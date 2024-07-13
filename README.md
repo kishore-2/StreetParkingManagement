@@ -11,13 +11,13 @@ This is a web application for managing street parking spots in a city. This appl
 
 https://youtu.be/880urBOQreQ
 
-#### Note: The Azure services like chatbot and static web apps won't work due to subscription disabled.
+#### Note: The Azure services like chatbot won't work due to subscription disabled.
 
 ## Getting Started
 
-To get started with this project, you can visit the Azure Static Web Page URL to access the application. (currently unavailable due to Subscription disabled)
+To get started with this project, you can visit the Azure Static Web Page URL to access the application.
 
-[Azure StaticWebPage Link] https://mango-coast-05994a500.5.azurestaticapps.net
+[Static Web Page URL] https://mango-coast-05994a500.5.azurestaticapps.net
 
 
 ## Usage

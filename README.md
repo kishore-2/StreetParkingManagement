@@ -17,7 +17,7 @@ https://youtu.be/880urBOQreQ
 
 To get started with this project, you can visit the Azure Static Web Page URL to access the application. (currently unavailable due to Subscription disabled)
 
-https://brave-water-065e9b810.3.azurestaticapps.net
+[Azure StaticWebPage Link] https://mango-coast-05994a500.5.azurestaticapps.net
 
 
 ## Usage

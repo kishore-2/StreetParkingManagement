@@ -3,6 +3,10 @@
 
 A Microsoft Future Ready Talent Project with the title of Street Parking Management in the catogory of Earth.
 
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/f8846341-4516-4045-b1d5-c6bdccc6b622" width="50%" style="display: block; margin-left: auto; margin-right: auto;">
+</p>
+
 ### Summary about the project:
 
 This is a web application for managing street parking spots in a city. This application allows users to view available parking spots on a map, reserve a parking spot, and pay for parking in advance, the main focus of this project is to reduce pollution by reducing traffic congestion which can help reduce the number of cars circling around looking for parking spots, which can lead to reduced traffic congestion and lower emissions. This application is hosted on an Azure Static Web Page and integrated with an Azure Chatbot for user service. 
